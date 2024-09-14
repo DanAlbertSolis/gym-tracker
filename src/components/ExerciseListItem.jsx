@@ -6,7 +6,7 @@ function ExerciseListItem({item}){
       <View style={styles.exerciseContainer}>
         <Text style={styles.exerciseName}>{item.name}</Text>
         <Text style={styles.exerciseSubtitle}>
-          {item.muscle.toUpperCase()} | {item.equipment.toUpperCase()}
+          <Text style={styles.subvalue}>{item.muscle}</Text> | <Text style={styles.subvalue}>{item.equipment}</Text>
         </Text>
       </View>
     );
@@ -26,6 +26,16 @@ function ExerciseListItem({item}){
         padding: 20,
         borderRadius: 10,
         gap: 5,
+
+        //shadow
+        shadowColor: '#000',
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        elevation: 5,
       },
     exerciseName: {
       fontSize: 20,
@@ -35,4 +45,9 @@ function ExerciseListItem({item}){
     exerciseSubtitle: {
       color: 'dimgray',
     },
+
+    subvalue: {
+      textTransform: 'capitalize',
+    }
   });
+

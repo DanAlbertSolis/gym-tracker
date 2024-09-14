@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, SafeAreaView, Button, FlatList } from "react-native";
 import { StatusBar  } from "expo-status-bar";
-import exercises from "./assets/data/exercises.json";
-import ExerciseListItem from "./src/components/ExerciseListItem";
+import exercises from "../../assets/data/exercises.json";
+import ExerciseListItem from "../../src/components/ExerciseListItem";
 
 
 
@@ -19,7 +19,7 @@ export default function App() {
 
       <StatusBar style="auto" />
     </View>
-  );
+  ); 
 }
 
 const styles = StyleSheet.create({
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#212121",
     justifyContent: 'center',
     padding: 10,
-    paddingTop: 70,
     },
 });
 
